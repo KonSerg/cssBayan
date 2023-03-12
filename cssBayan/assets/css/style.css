@@ -1,7 +1,7 @@
 html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    font-family: 'Roboto', sans-serif;
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -17,271 +17,266 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
-    font-size: 2.2em;
-    margin: 1em 0;
+	font-size: 2.2em;
+	margin: 1em 0;
 }
 
 img {
-    border-style: none;
+	border-style: none;
 }
 
 [type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
+	box-sizing: border-box;
+	padding: 0;
 }
 
 .page {
-    flex: auto;
-    background-color: rgb(255, 253, 233);
+	flex: auto;
+	background-color: rgb(255, 253, 233);
 }
 
 .wrapper {
-    display: block;
-    max-width: 1024px;
-    margin-right: auto;
-    margin-left:  auto;
-    padding: 0 1.2em;
-    position: relative;
+	display: block;
+	max-width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 1.2em;
+	position: relative;
 }
 
 .wrapper-inner {
-    padding: 2.5em 0;
+	padding: 2.5em 0;
 }
 
 .accordeon {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 7px 1px rgba(39, 39, 39, 0.5);
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 5px 7px 1px rgba(39, 39, 39, 0.5);
 }
 
 .accordeon input {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
 }
 
 .tab {
-    width: 100%;
-    color: white;
-    overflow: hidden;
+	width: 100%;
+	color: #ffffff;
+	overflow: hidden;
 }
 
 .control-label {
-    display: flex;
-    background-color: #0b81c5;
-    font-weight: bold;
-    cursor: pointer;
-    flex-direction: column;
-    align-items: stretch;
+	display: flex;
+	background-color: #0b81c5;
+	font-weight: bold;
+	cursor: pointer;
+	flex-direction: column;
+	align-items: stretch;
 }
 
 .control-label .control-label-title {
-    display: flex;
-    justify-content: space-between;    
-    padding: 0.8em;
-    border-top: solid 0.05em #ffffff;
-    font-size: 1.5em;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.8em;
+	border-top: solid 0.05em #ffffff;
+	font-size: 1.5em;
 }
 
 .tab:first-child .control-label .control-label-title {
-    border-top: none;
+	border-top: none;
 }
 
 input:checked + .control-label .control-label-title {
-    color: #232324;
+	color: #232324;
 }
 
 input:checked + .control-label .control-label-title {
-    border-top-color: #f3c807;
-    background-color: #f3c807;
+	border-top-color: #f3c807;
+	background-color: #f3c807;
 }
 
 .control-label:active .control-label-title {
-    background-color: #b9b9b9 !important;
-    border-top-color: #b9b9b9 !important;
-    color: #0b81c5 !important;
+	background-color: #b9b9b9 !important;
+	border-top-color: #b9b9b9 !important;
+	color: #0b81c5 !important;
 }
 
 .control-label:active .tab-content img, input:active + .control-label .tab-content img {
-    filter: grayscale(1);
+	filter: grayscale(1);
 }
 
 .control-label:active .control-label-title .icon {
-    background-image: url("../images/arrow-icon-active.svg");
+	background-image: url("../images/arrow-icon-active.svg");
 }
 
 .control-label .control-label-title > .icon {
-    width: 1em;
-    height: 1em;
-    background-image: url("../images/arrow-icon.svg");
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: none;
-    transition: all 0.5s;
+	width: 1em;
+	height: 1em;
+	background-image: url("../images/arrow-icon.svg");
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: none;
+	transition: all 0.5s;
 }
 
 .tab-content {
-    width:100%;
-    height: 0;
-    background: #ffffff;
-    text-align: center;
+	width: 100%;
+	height: 0;
+	background: #ffffff;
+	text-align: center;
 }
 
 .tab-content img {
-    width: 0;
-    height: 0;
-    transform: scale(0);
-    transition: transform 0.5s ease-in;
+	width: 0;
+	height: 0;
+	transform: scale(0);
+	transition: transform 0.5s ease-in;
 }
 
-input:checked + .control-label .control-label-title .icon{
-    transform-origin: center;
-    transform: rotate(90deg);
+input:checked + .control-label .control-label-title .icon {
+	transform-origin: center;
+	transform: rotate(90deg);
 }
 
-input:checked + .control-label > .tab-content{
-    height: auto;
-    max-height: 100vh;
-    padding: 1em;
-    transition: all 0.5s ease-out;
+input:checked + .control-label > .tab-content {
+	height: auto;
+	max-height: 100vh;
+	padding: 1em;
+	transition: all 0.5s ease-out;
 }
 
-input:checked + .control-label > .tab-content img{
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 20em;
-    transform: scale(1);
+input:checked + .control-label > .tab-content img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 20em;
+	transform: scale(1);
 }
 
 footer {
-    background-color: rgb(43, 43, 43);
-    margin-top: auto;
-    color: #fff;
-    padding: 1em;
+	background-color: rgb(43, 43, 43);
+	margin-top: auto;
+	color: #ffffff;
+	padding: 1em;
 }
 
 /* Media hover */
 
 @media (hover: hover) {
     
-    .accordeon:hover .tab {
-        color: #000000;
-    }
+	.accordeon:hover .tab {
+		color: #000000;
+	}
 
-    .control-label:hover .control-label-title {
-        border-top-color: #f3c807;
-        background-color: #f3c807;
-    }
+	.control-label:hover .control-label-title {
+		border-top-color: #f3c807;
+		background-color: #f3c807;
+	}
 
-    .accordeon:hover .control-label .control-label-title .icon {
-        display: block;
-    }
+	.accordeon:hover .control-label .control-label-title .icon {
+		display: block;
+	}
 
-    .control-label:hover .control-label-title .icon {
-        transform-origin: center;
-        transform: rotate(90deg);
-    }
-    
-    .control-label:hover > .tab-content {
-        height: auto;
-        max-height: 100vh;
-        padding: 1em;
-        transition: all 0.5s ease-out;
-    }
-    
-    .control-label:hover > .tab-content img {
-        width: auto;
-        height: auto;
-        max-width: 100%;
-        max-height: 20em;
-        transform: scale(1);
-    }
+	.control-label:hover .control-label-title .icon {
+		transform-origin: center;
+		transform: rotate(90deg);
+	}
 
+	.control-label:hover > .tab-content {
+		height: auto;
+		max-height: 100vh;
+		padding: 1em;
+		transition: all 0.5s ease-out;
+	}
+
+	.control-label:hover > .tab-content img {
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: 20em;
+		transform: scale(1);
+	}
 }
 
 @media (hover: none) {
         
-    .accordeon .control-label .control-label-title .icon {
-        display: block;
-    }
-
+	.accordeon .control-label .control-label-title .icon {
+		display: block;
+	}
 }
 
 /* Break-points */
 
 @media (max-width: 52em) {
 
-    .wrapper-inner {
-        padding: 1em 0;
-    }
+	.wrapper-inner {
+		padding: 1em 0;
+	}
 
-    h1 {
-        font-size: 1.8em;
-    }
+	h1 {
+		font-size: 1.8em;
+	}
 
-    .control-label .control-label-title {        
-        font-size: 1.2em;
-        padding: 0.8em;
-    }
+	.control-label .control-label-title {
+		font-size: 1.2em;
+		padding: 0.8em;
+	}
 
-    .tab-content img {
-        max-height: 16em;
-    }
-
+	.tab-content img {
+		max-height: 16em;
+	}
 }
 
 @media (max-width: 30em) {
     
-    .wrapper-inner {
-        padding: 0.8em 0;
-    }
+	.wrapper-inner {
+		padding: 0.8em 0;
+	}
 
-    h1 {
-        font-size: 1.5em;
-    }
+	h1 {
+		font-size: 1.5em;
+	}
 
-    .control-label .control-label-title {
-        font-size: 1em;
-        padding: 0.7em;
-    }
+	.control-label .control-label-title {
+		font-size: 1em;
+		padding: 0.7em;
+	}
 
-    .tab-content img {
-        max-height: 15em;
-    }
-
+	.tab-content img {
+		max-height: 15em;
+	}
 }
 
 @media (max-width: 20em) {
 
-    .wrapper {
-        padding: 0 0.6em;
-    }
+	.wrapper {
+		padding: 0 0.6em;
+	}
 
-    .wrapper-inner {
-        padding: 0.5em 0;
-    }
+	.wrapper-inner {
+		padding: 0.5em 0;
+	}
 
-    h1 {
-        font-size: 1.2em;
-    }
+	h1 {
+		font-size: 1.2em;
+	}
 
-    .control-label .control-label-title {
-        font-size: 0.8em;
-        padding: 0.6em;        
-    }
+	.control-label .control-label-title {
+		font-size: 0.8em;
+		padding: 0.6em;
+	}
 
-    .tab-content img {
-        max-height: 13em;
-    }
-
+	.tab-content img {
+		max-height: 13em;
+	}
 }
