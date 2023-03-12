@@ -106,7 +106,7 @@ img {
 .control-label span::after {
     content: "\276F";
     width: 15px;
-    height: 5px;
+    height: 15px;
     text-align: center;
     transition: all 0.8s;
 }
@@ -128,6 +128,7 @@ input:checked + .control-label {
 }
 
 input:checked + .control-label span::after, .control-label:hover span::after {
+    transform-origin: center;
     transform: rotate(90deg);
 }
 
