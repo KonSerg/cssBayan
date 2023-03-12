@@ -25,8 +25,8 @@ body {
 }
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    font-size: 35px;
+    margin: 20px 0;
 }
 
 img {
@@ -36,4 +36,109 @@ img {
 [type="radio"] {
     box-sizing: border-box;
     padding: 0;
+}
+
+.page {
+    flex: auto;
+    background-color: rgb(255, 253, 233);
+}
+
+.wrapper {
+    display: block;
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left:  auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.wrapper-inner {
+    padding: 50px 0;
+}
+
+.accordeon {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 7px 1px rgba(39, 39, 39, 0.5);
+}
+
+.accordeon input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tab {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+}
+
+.control-label {
+    display: flex;
+    background-color: #0b81c5;
+    font-weight: bold;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.control-label span {
+    display: flex;
+    justify-content: space-between;    
+    padding: 20px;
+    border-top: solid 1px #ffffff;
+}
+
+.tab:first-child .control-label span {
+    border-top: none;
+}
+
+.control-label:hover, input:checked + .control-label {
+    background-color: #f3c807;
+    color: #232324;
+}
+
+.control-label:hover span, input:checked + .control-label span{
+    border-top-color: #f3c807;
+}
+
+.control-label span::after {
+    content: "\276F";
+    width: 15px;
+    height: 5px;
+    text-align: center;
+    transition: all 0.8s;
+}
+
+.tab-content {
+    max-height: 0;
+    color: #000000;
+    background: white;
+    transition: all 0.8s;
+    text-align: center;
+}
+
+.tab-content img {
+    max-height: 300px;
+}
+
+input:checked + .control-label {
+    background: darken(#000, 10%);
+}
+
+input:checked + .control-label span::after, .control-label:hover span::after {
+    transform: rotate(90deg);
+}
+
+input:checked + .control-label > .tab-content, .control-label:hover > .tab-content{
+    max-height: 100vh; 
+    padding: 30px;
+}
+
+footer {
+    background-color: rgb(43, 43, 43);
+    margin-top: auto;
+    color: #fff;
+    padding: 20px;
 }
